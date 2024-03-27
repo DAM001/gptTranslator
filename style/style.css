@@ -1,0 +1,113 @@
+:root {
+    --background-color: #24222E;
+    --secondary-background-color: #2E313E;
+    --theme-color: #565697;
+    --text-color: #FFFFFF;
+    --border-radius: 16px;
+    --space-1: 4px;
+    --space-2: 8px;
+    --space-3: 12px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Outfit', sans-serif;
+    font-weight: 100;
+    background-color: var(--background-color);
+    color: var(--text-color);
+}
+
+.block {
+    padding: var(--space-2);
+    margin: var(--space-2);
+    width: calc(100% - (var(--space-2) * 4));
+    background-color: var(--secondary-background-color);
+    border-radius: var(--border-radius);
+    box-shadow: inset 4px 4px 4px -2px var(--theme-color);
+}
+
+header {
+    margin: 120px auto;
+}
+
+h1 {
+    font-size: 64px;
+    font-weight: 900;
+}
+
+header h1,
+header h2 {
+    text-align: center;
+}
+
+h2 {
+    margin: 0 var(--space-1) var(--space-2);
+}
+
+p {
+    margin: 0 var(--space-1) var(--space-1);
+}
+
+.small {
+    font-size: 12px;
+    margin: var(--space-1) var(--space-1) 0;
+}
+
+
+/* INPUT */
+
+button {
+    margin: var(--space-2) 0 0;
+    padding: var(--space-2) var(--space-3);
+    color: var(--text-color);
+    outline: 0px;
+    border: none;
+    background-color: var(--theme-color);
+    border-radius: var(--border-radius);
+    box-shadow: inset 1px 1px 4px -1px var(--text-color);
+}
+
+input,
+textarea {
+    font-family: 'Outfit', sans-serif;
+    color: var(--text-color);
+    outline: 0px;
+    border: none;
+}
+
+textarea {
+    height: 150px;
+    resize: vertical;
+    min-height: 100px;
+    max-height: 500px;
+}
+
+.input-box {
+    box-sizing: border-box;
+    width: 100%;
+    padding: var(--space-2) var(--space-3);
+    font-size: 14px;
+    background-color: var(--secondary-background-color);
+    border-radius: var(--border-radius);
+    box-shadow: inset 2px 2px 8px 4px var(--background-color);
+}
+
+.input-box p {
+    margin: 0;
+    min-height: calc(150px - var(--space-2) * 2);
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+}
+
+@media (max-width: 900px) {
+    .container {
+        flex-direction: column;
+    }
+}
