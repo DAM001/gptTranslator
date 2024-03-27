@@ -19,6 +19,15 @@
     </header>
 
     <div class="content">
+        <div class="block">
+            <h2>Settings</h2>
+            <p>API key:</p>
+            <div class="api-folder">
+                <input class="input-box" type="password" id="apiKey" placeholder="API Key">
+                <button id="show" onclick="showApiKey()">Show</button></div>
+            <p class="small">Note: Your api key is saved into the cookies.</p>
+        </div>
+
         <div class="container">
             <div class="block">
                 <h2>Input text</h2>
@@ -42,16 +51,15 @@
         </div>
 
         <div class="block">
-            <h2>Settings</h2>
-            <p>API key:</p>
-            <div class="api-folder">
-                <input class="input-box" type="password" id="apiKey" placeholder="API Key">
-                <button id="show" onclick="showApiKey()">Show</button></div>
-            <p class="small">Note: Your api key is saved into the cookies.</p>
+            <h2>History</h2>
+            <div id="history">
+
+            </div>
         </div>
     </div>
 
     <script src="./src/cookies.js"></script>
+    <script src="./src/history.js"></script>
     <script src="./src/app.js"></script>
 </body>
 

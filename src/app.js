@@ -1,6 +1,8 @@
 async function sendMessage() {
+    const translateText = document.getElementById('message').value;
+    const language = document.getElementById('language').value;
     const apiKey = document.getElementById('apiKey').value;
-    const userPrompt = "Translate this to " + document.getElementById('language').value + ": " + document.getElementById('message').value;
+    const userPrompt = "Translate this to " + language + ": " + translateText;
     const url = 'https://api.openai.com/v1/chat/completions';
     const headers = {
         'Content-Type': 'application/json',
@@ -30,6 +32,8 @@ async function sendMessage() {
 
             // Display the received message in the 'answer' paragraph
             document.getElementById('answer').textContent = message;
+
+            createHistoryBlock(translateText, message, document.getElementById('language').value);
         }
     } catch (error) {
         console.error('Error:', error);
