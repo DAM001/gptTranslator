@@ -1,7 +1,13 @@
 async function sendMessage() {
+    const apiKey = document.getElementById('apiKey').value;
+
+    if (!apiKey) {
+        alert("No api key!");
+        return;
+    }
+
     const translateText = document.getElementById('message').value;
     const language = document.getElementById('language').value;
-    const apiKey = document.getElementById('apiKey').value;
     const userPrompt = "Translate this to " + language + ": " + translateText;
     const url = 'https://api.openai.com/v1/chat/completions';
     const headers = {

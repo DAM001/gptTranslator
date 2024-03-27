@@ -2,6 +2,7 @@
     --background-color: #24222E;
     --secondary-background-color: #2E313E;
     --theme-color: #565697;
+    --theme-highlight-color: #7373BA;
     --text-color: #FFFFFF;
     --border-radius: 16px;
     --space-1: 4px;
@@ -21,22 +22,6 @@ body {
     color: var(--text-color);
 }
 
-.content {
-    margin: auto;
-    width: 100%;
-    max-width: 900px;
-}
-
-.block {
-    padding: var(--space-2);
-    margin: var(--space-2);
-    width: calc(100% - (var(--space-2) * 4));
-    position: relative;
-    background-color: var(--secondary-background-color);
-    border-radius: var(--border-radius);
-    box-shadow: inset 4px 4px 4px -2px var(--theme-color);
-}
-
 header {
     margin: 120px auto;
 }
@@ -47,7 +32,7 @@ header h2 {
 }
 
 h1 {
-    font-size: 64px;
+    font-size: 52px;
     font-weight: 900;
     line-height: .85;
 }
@@ -79,6 +64,31 @@ p {
     margin-left: var(--space-2);
 }
 
+.content {
+    margin: auto;
+    width: 100%;
+    max-width: 900px;
+}
+
+.block {
+    padding: var(--space-2);
+    margin: var(--space-2);
+    width: calc(100% - (var(--space-2) * 4));
+    position: relative;
+    background-color: var(--secondary-background-color);
+    border-radius: var(--border-radius);
+    box-shadow: inset 4px 4px 4px -2px var(--theme-color);
+}
+
+.block h2 {
+    display: inline-block;
+}
+
+img {
+    height: 18px;
+    margin-left: var(--space-1);
+}
+
 
 /* INPUT */
 
@@ -92,12 +102,22 @@ select {
     border-radius: var(--border-radius);
     background-color: var(--theme-color);
     box-shadow: inset 1px 1px 4px -1px var(--text-color);
+    transition: .2s;
+}
+
+select:focus {
+    outline: none;
 }
 
 button {
     font-weight: 900;
     outline: 0px;
     margin-left: var(--space-1);
+}
+
+button:hover,
+select:hover {
+    background-color: var(--theme-highlight-color);
 }
 
 #sendBtn {

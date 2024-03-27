@@ -3,7 +3,7 @@ function createHistoryBlock(from, to, language) {
     historyDiv.className = 'history';
 
     const h3 = document.createElement('h3');
-    h3.textContent = language + ' - ' + getDate();
+    h3.textContent = getDate() + ' - ' + language;
 
     const containerDiv = document.createElement('div');
     containerDiv.className = 'container';
