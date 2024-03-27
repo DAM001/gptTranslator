@@ -98,6 +98,7 @@ img {
 
 button,
 select {
+    font-weight: 900;
     font-family: 'Outfit', sans-serif;
     font-size: 14px;
     padding: var(--space-2) var(--space-3);
@@ -114,7 +115,6 @@ select:focus {
 }
 
 button {
-    font-weight: 900;
     outline: 0px;
     margin-left: var(--space-1);
 }
