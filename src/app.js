@@ -1,6 +1,6 @@
 async function sendMessage() {
     const apiKey = document.getElementById('apiKey').value;
-    const userPrompt = "Translate the following text to english: " + document.getElementById('message').value;
+    const userPrompt = "Translate this to " + document.getElementById('language').value + ": " + document.getElementById('message').value;
     const url = 'https://api.openai.com/v1/chat/completions';
     const headers = {
         'Content-Type': 'application/json',
@@ -38,4 +38,20 @@ async function sendMessage() {
     }
 
     saveApiKey();
+}
+
+let isApiKeyVisible = false;
+
+function showApiKey() {
+    isApiKeyVisible = !isApiKeyVisible;
+    document.getElementById('apiKey').type = isApiKeyVisible ? "text" : "password";
+    document.getElementById('show').innerHTML = isApiKeyVisible ? "Hide" : "Show";
+}
+
+function copyText() {
+    navigator.clipboard.writeText(document.getElementById('answer').textContent).then(function() {
+        console.log('Text successfully copied to clipboard');
+    }).catch(function(err) {
+        console.error('Could not copy text: ', err);
+    });
 }
