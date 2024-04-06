@@ -1,7 +1,8 @@
 # gptTranslator
 Website by DAM
 
-Check out [GPT Translator]("https://www.damdev.xyz/Content/gptTranslator/") in action!
+Check out in action!
+https://www.damdev.xyz/Content/gptTranslator/
 
 ![Project preview](./preview.png "Project preview")
 
